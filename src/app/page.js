@@ -278,7 +278,6 @@ export default function Home() {
 
                 <div className="p-7">
                   <div className="flex items-start justify-between">
-                    <div className="text-4xl">{concept.icon}</div>
                     <span className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-[10px] font-bold uppercase tracking-widest text-zinc-400">
                       Concept
                     </span>
@@ -318,331 +317,51 @@ export default function Home() {
                         </div>
                       </div>
 
-                      {concept.type === "BEAUTY & SALON" ? (
-                        <div className="bg-[#fff8fb]">
-                          {/* Salon navigation */}
-                          <div className="flex items-center justify-between px-4 py-3">
-                            <div>
-                              <div className="font-serif text-sm font-black tracking-wide text-[#6b214e]">
-                                LUXE
-                              </div>
-                              <div className="text-[6px] tracking-[0.3em] text-[#a76a8e]">
-                                BEAUTY STUDIO
-                              </div>
-                            </div>
+                      {(() => {
+                        const previewImages = {
+                          "BEAUTY & SALON": "/portfolio/beauty/beauty.png",
+                          "CLEANING SERVICES": "/portfolio/cleaning/cleaning.png",
+                          RESTAURANT: "/portfolio/restaurant/restaurant.png",
+                          "LAWN & LANDSCAPING": "/portfolio/lawn/lawn.png",
+                          "HOME SERVICES": "/portfolio/home/home.png",
+                          "BOUTIQUE & E-COMMERCE": "/portfolio/boutique/boutique.png",
+                        };
 
-                            <div className="rounded-full bg-[#6b214e] px-3 py-1.5 text-[7px] font-bold text-white">
-                              BOOK NOW
-                            </div>
-                          </div>
+                        const image = previewImages[concept.type];
 
-                          {/* Salon hero */}
-                          <div className="relative overflow-hidden bg-gradient-to-br from-[#f8d8e7] via-[#fff1f6] to-[#d8b5cf] px-5 py-7">
-                            <div className="relative z-10 w-3/4">
-                              <div className="text-[7px] font-bold uppercase tracking-[0.22em] text-[#9b5077]">
-                                Beauty • Confidence • Luxury
-                              </div>
+                        return image ? (
+                          <div className="group/preview relative aspect-[4/3] overflow-hidden bg-zinc-950 sm:aspect-[16/10]">
+                            <img
+                              src={image}
+                              alt={`${concept.name} premium website concept`}
+                              className={`h-full w-full object-top transition duration-[1800ms] ease-out group-hover/preview:scale-[1.025] ${
+                                concept.type === "BEAUTY & SALON" ||
+                                concept.type === "CLEANING SERVICES"
+                                  ? "object-cover"
+                                  : "object-contain"
+                              }`}
+                              loading="lazy"
+                            />
 
-                              <div className="mt-2 font-serif text-2xl font-black leading-none text-[#4b1738]">
-                                Your beauty.
-                                <br />
-                                Your moment.
-                              </div>
+                            <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/25 via-transparent to-white/5" />
 
-                              <div className="mt-2 max-w-[160px] text-[7px] leading-3 text-[#70445e]">
-                                Luxury beauty services designed to help you look
-                                and feel your absolute best.
-                              </div>
-
-                              <div className="mt-3 inline-block rounded-full bg-[#6b214e] px-3 py-1.5 text-[7px] font-bold text-white">
-                                BOOK YOUR APPOINTMENT
-                              </div>
-                            </div>
-
-                            <div className="absolute -bottom-8 -right-5 h-28 w-28 rounded-full bg-[#b96b96]/30" />
-                            <div className="absolute right-5 top-5 text-5xl opacity-70">
-                              ✨
-                            </div>
-                          </div>
-
-                          {/* Salon services */}
-                          <div className="grid grid-cols-3 gap-2 px-4 py-3">
-                            {["HAIR", "MAKEUP", "SKIN"].map((service) => (
-                              <div
-                                key={service}
-                                className="rounded-lg border border-[#efd7e4] bg-white px-2 py-2 text-center"
-                              >
-                                <div className="text-[9px]">✦</div>
-                                <div className="mt-1 text-[6px] font-black tracking-wider text-[#6b214e]">
-                                  {service}
+                            <div className="pointer-events-none absolute inset-x-0 bottom-0 flex items-end justify-between bg-gradient-to-t from-black/75 to-transparent px-4 pb-3 pt-10 text-white opacity-0 transition duration-500 group-hover/preview:opacity-100">
+                              <div>
+                                <div className="text-[7px] font-bold uppercase tracking-[0.22em] text-white/65">
+                                  Premium Concept
+                                </div>
+                                <div className="mt-0.5 text-xs font-black">
+                                  {concept.name}
                                 </div>
                               </div>
-                            ))}
-                          </div>
-                        </div>
-                      ) : concept.type === "CLEANING SERVICES" ? (
-                        <div className="bg-white text-slate-900">
-                          <div className="flex items-center justify-between px-4 py-3">
-                            <div>
-                              <div className="text-xs font-black text-sky-600">
-                                FRESH & CLEAN
+
+                              <div className="rounded-full border border-white/30 bg-black/30 px-2.5 py-1 text-[7px] font-bold backdrop-blur">
+                                VIEW DESIGN
                               </div>
-                              <div className="text-[6px] font-bold uppercase tracking-[0.2em] text-slate-400">
-                                Professional Cleaning
-                              </div>
-                            </div>
-                            <div className="rounded-full bg-sky-500 px-3 py-1.5 text-[7px] font-black text-white">
-                              FREE QUOTE
                             </div>
                           </div>
-
-                          <div className="relative overflow-hidden bg-gradient-to-br from-sky-50 via-cyan-50 to-blue-100 px-5 py-6">
-                            <div className="relative z-10 w-3/4">
-                              <div className="text-[7px] font-black uppercase tracking-[0.2em] text-sky-600">
-                                A Cleaner Home Starts Here
-                              </div>
-
-                              <div className="mt-2 text-xl font-black leading-none text-slate-900">
-                                Spotless spaces.
-                                <br />
-                                Zero stress.
-                              </div>
-
-                              <div className="mt-2 text-[7px] leading-3 text-slate-500">
-                                Reliable residential and commercial cleaning
-                                tailored to your schedule.
-                              </div>
-
-                              <div className="mt-3 inline-block rounded-full bg-sky-500 px-3 py-1.5 text-[7px] font-black text-white">
-                                GET A FREE QUOTE
-                              </div>
-                            </div>
-
-                            <div className="absolute right-5 top-7 text-5xl">
-                              🫧
-                            </div>
-                          </div>
-
-                          <div className="grid grid-cols-3 gap-2 p-3">
-                            {["HOME", "OFFICE", "MOVE-OUT"].map((service) => (
-                              <div
-                                key={service}
-                                className="rounded-lg border border-sky-100 bg-sky-50 p-2 text-center text-[6px] font-black text-sky-700"
-                              >
-                                ✦ {service}
-                              </div>
-                            ))}
-                          </div>
-                        </div>
-                      ) : concept.type === "RESTAURANT" ? (
-                        <div className="bg-[#160d09] text-white">
-                          <div className="flex items-center justify-between px-4 py-3">
-                            <div>
-                              <div className="font-serif text-sm font-black text-amber-300">
-                                THE SOCIAL
-                              </div>
-                              <div className="text-[6px] uppercase tracking-[0.3em] text-orange-200/60">
-                                Kitchen & Bar
-                              </div>
-                            </div>
-
-                            <div className="rounded-full border border-amber-400/50 px-3 py-1.5 text-[7px] font-bold text-amber-200">
-                              RESERVE
-                            </div>
-                          </div>
-
-                          <div className="relative overflow-hidden bg-gradient-to-br from-[#3a160c] via-[#24100b] to-[#090605] px-5 py-7">
-                            <div className="relative z-10">
-                              <div className="text-[7px] font-bold uppercase tracking-[0.2em] text-amber-400">
-                                Crafted • Local • Unforgettable
-                              </div>
-
-                              <div className="mt-2 font-serif text-2xl font-black leading-none">
-                                Taste the
-                                <br />
-                                experience.
-                              </div>
-
-                              <div className="mt-2 max-w-[160px] text-[7px] leading-3 text-orange-100/60">
-                                Elevated dishes, signature cocktails and an
-                                atmosphere worth sharing.
-                              </div>
-
-                              <div className="mt-3 inline-block bg-amber-500 px-3 py-1.5 text-[7px] font-black text-black">
-                                VIEW THE MENU
-                              </div>
-                            </div>
-
-                            <div className="absolute -right-2 bottom-0 text-6xl opacity-80">
-                              🍝
-                            </div>
-                          </div>
-
-                          <div className="flex justify-between px-4 py-3 text-[6px] font-bold uppercase tracking-wider text-amber-200/70">
-                            <span>Menu</span>
-                            <span>Reservations</span>
-                            <span>Private Dining</span>
-                          </div>
-                        </div>
-                      ) : concept.type === "LAWN & LANDSCAPING" ? (
-                        <div className="bg-[#f5fbf4] text-emerald-950">
-                          <div className="flex items-center justify-between px-4 py-3">
-                            <div className="text-xs font-black">
-                              GREEN
-                              <span className="text-emerald-600">EDGE</span>
-                            </div>
-
-                            <div className="rounded-md bg-emerald-700 px-3 py-1.5 text-[7px] font-black text-white">
-                              FREE ESTIMATE
-                            </div>
-                          </div>
-
-                          <div className="relative overflow-hidden bg-gradient-to-br from-emerald-800 via-green-700 to-lime-600 px-5 py-7 text-white">
-                            <div className="relative z-10 w-3/4">
-                              <div className="text-[7px] font-bold uppercase tracking-[0.2em] text-lime-200">
-                                Love Your Outdoors
-                              </div>
-
-                              <div className="mt-2 text-2xl font-black leading-none">
-                                Better lawns.
-                                <br />
-                                Better curb appeal.
-                              </div>
-
-                              <div className="mt-2 text-[7px] leading-3 text-emerald-50/80">
-                                Lawn care and landscaping that keeps your
-                                property looking its best.
-                              </div>
-
-                              <div className="mt-3 inline-block rounded-md bg-lime-300 px-3 py-1.5 text-[7px] font-black text-emerald-950">
-                                GET MY ESTIMATE
-                              </div>
-                            </div>
-
-                            <div className="absolute bottom-2 right-4 text-6xl opacity-70">
-                              🌳
-                            </div>
-                          </div>
-
-                          <div className="grid grid-cols-3 gap-2 p-3 text-center">
-                            {["LAWN CARE", "LANDSCAPING", "CLEANUPS"].map((service) => (
-                              <div
-                                key={service}
-                                className="rounded-md bg-emerald-50 p-2 text-[6px] font-black text-emerald-800"
-                              >
-                                {service}
-                              </div>
-                            ))}
-                          </div>
-                        </div>
-                      ) : concept.type === "HOME SERVICES" ? (
-                        <div className="bg-[#f7f5f0] text-zinc-900">
-                          <div className="flex items-center justify-between px-4 py-3">
-                            <div>
-                              <div className="text-xs font-black">
-                                PRIME HOME
-                              </div>
-                              <div className="text-[6px] uppercase tracking-[0.2em] text-orange-600">
-                                Solutions
-                              </div>
-                            </div>
-
-                            <div className="bg-zinc-900 px-3 py-1.5 text-[7px] font-black text-white">
-                              GET A QUOTE
-                            </div>
-                          </div>
-
-                          <div className="relative overflow-hidden bg-gradient-to-br from-zinc-800 via-zinc-900 to-black px-5 py-7 text-white">
-                            <div className="relative z-10 w-3/4">
-                              <div className="text-[7px] font-bold uppercase tracking-[0.2em] text-orange-400">
-                                Built Right. Built To Last.
-                              </div>
-
-                              <div className="mt-2 text-2xl font-black leading-none">
-                                Upgrade the
-                                <br />
-                                place you call home.
-                              </div>
-
-                              <div className="mt-2 text-[7px] leading-3 text-zinc-300">
-                                Quality repairs, renovations and improvements
-                                from a team you can trust.
-                              </div>
-
-                              <div className="mt-3 inline-block bg-orange-500 px-3 py-1.5 text-[7px] font-black text-white">
-                                REQUEST A QUOTE
-                              </div>
-                            </div>
-
-                            <div className="absolute bottom-2 right-4 text-6xl opacity-60">
-                              🛠️
-                            </div>
-                          </div>
-
-                          <div className="flex justify-between px-4 py-3 text-[6px] font-black uppercase text-zinc-600">
-                            <span>Renovations</span>
-                            <span>Repairs</span>
-                            <span>Projects</span>
-                          </div>
-                        </div>
-                      ) : concept.type === "BOUTIQUE & E-COMMERCE" ? (
-                        <div className="bg-[#fffaf7] text-zinc-900">
-                          <div className="flex items-center justify-between px-4 py-3">
-                            <div className="font-serif text-sm font-black tracking-widest">
-                              MAISON LUXE
-                            </div>
-                            <div className="text-[7px] font-black uppercase tracking-wider">
-                              SHOP ◇
-                            </div>
-                          </div>
-
-                          <div className="relative overflow-hidden bg-gradient-to-br from-[#e8d6ff] via-[#f6e9f2] to-[#f2c6dc] px-5 py-7">
-                            <div className="relative z-10 w-3/4">
-                              <div className="text-[7px] font-bold uppercase tracking-[0.25em] text-purple-700">
-                                The New Collection
-                              </div>
-
-                              <div className="mt-2 font-serif text-2xl font-black leading-none">
-                                Style that
-                                <br />
-                                speaks for you.
-                              </div>
-
-                              <div className="mt-2 text-[7px] leading-3 text-zinc-600">
-                                Curated pieces designed to make every day feel
-                                a little more luxurious.
-                              </div>
-
-                              <div className="mt-3 inline-block bg-black px-3 py-1.5 text-[7px] font-black text-white">
-                                SHOP COLLECTION
-                              </div>
-                            </div>
-
-                            <div className="absolute bottom-1 right-4 text-6xl opacity-70">
-                              👜
-                            </div>
-                          </div>
-
-                          <div className="grid grid-cols-3 gap-2 p-3">
-                            {["NEW", "BEST SELLERS", "ACCESSORIES"].map((item) => (
-                              <div
-                                key={item}
-                                className="rounded-md border border-purple-100 bg-white p-2 text-center text-[6px] font-black"
-                              >
-                                {item}
-                              </div>
-                            ))}
-                          </div>
-                        </div>
-                      ) : (
-                        <div className="bg-[#090918] p-5">
-                          <div
-                            className={`h-24 rounded-xl bg-gradient-to-r ${concept.accent} opacity-80`}
-                          />
-                          <div className="mt-3 h-2 w-3/4 rounded bg-white/15" />
-                          <div className="mt-2 h-2 w-1/2 rounded bg-white/10" />
-                        </div>
-                      )}
+                        ) : null;
+                      })()}
                     </div>
                   </div>
                 </div>

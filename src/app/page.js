@@ -1,4 +1,5 @@
 import InquiryForm from "./InquiryForm";
+import HeroDemo from "./HeroDemo";
 
 const concepts = [
   {
@@ -226,34 +227,7 @@ export default function Home() {
                   </div>
                 </div>
 
-                <div className="rounded-2xl bg-gradient-to-br from-purple-700 via-fuchsia-700 to-cyan-600 p-[1px]">
-                  <div className="rounded-2xl bg-[#0b0b1d] p-8">
-                    <div className="text-sm font-bold text-cyan-300">
-                      PROFESSIONAL. MODERN. YOURS.
-                    </div>
-                    <div className="mt-3 text-4xl font-black leading-tight">
-                      <span className="bg-gradient-to-r from-fuchsia-300 via-purple-200 to-cyan-300 bg-clip-text text-transparent drop-shadow-[0_0_18px_rgba(217,70,239,0.2)]">
-                        Turn your idea into a
-                      </span>
-                      <br />
-                      <span className="bg-gradient-to-r from-purple-200 via-fuchsia-300 to-cyan-300 bg-clip-text text-transparent drop-shadow-[0_0_18px_rgba(34,211,238,0.2)]">
-                        digital experience.
-                      </span>
-                    </div>
-                    <div className="mt-5 h-2 w-32 rounded-full bg-gradient-to-r from-purple-500 to-cyan-400" />
-                  </div>
-                </div>
-
-                <div className="mt-5 grid grid-cols-3 gap-3">
-                  {["DESIGN", "MOBILE", "GROWTH"].map((item) => (
-                    <div
-                      key={item}
-                      className="rounded-xl border border-white/10 bg-white/5 p-4 text-center text-xs font-bold text-zinc-300"
-                    >
-                      {item}
-                    </div>
-                  ))}
-                </div>
+                <HeroDemo />
               </div>
             </div>
           </div>

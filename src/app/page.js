@@ -1,3 +1,5 @@
+import InquiryForm from "./InquiryForm";
+
 const concepts = [
   {
     icon: "💇🏾‍♀️",
@@ -85,7 +87,12 @@ export default function Home() {
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
           <div>
             <div className="text-xl font-black tracking-tight">
-              KBETZ <span className="text-cyan-400">CREATIVE</span>
+              <span className="bg-gradient-to-r from-fuchsia-400 via-purple-300 to-cyan-300 bg-clip-text text-transparent">
+                KBETZ
+              </span>{" "}
+              <span className="bg-gradient-to-r from-fuchsia-300 via-cyan-300 to-cyan-400 bg-clip-text text-transparent">
+                CREATIVE SOLUTIONS
+              </span>
             </div>
             <div className="text-[10px] uppercase tracking-[0.35em] text-purple-300">
               Solutions · by Luxevra
@@ -114,7 +121,22 @@ export default function Home() {
       </nav>
 
       {/* Hero */}
-      <section className="relative flex min-h-screen items-center pt-24">
+      <section className="relative flex min-h-screen items-center overflow-hidden pt-24">
+        {/* Futuristic KBETZ light field */}
+        <div className="pointer-events-none absolute inset-0 overflow-hidden">
+          <div className="absolute -left-32 top-[12%] h-[420px] w-[70%] -rotate-12 rounded-[100%] border-t-2 border-fuchsia-400/40 bg-fuchsia-500/5 blur-[2px] shadow-[0_-20px_80px_rgba(217,70,239,0.25)]" />
+          <div className="absolute -right-40 top-[22%] h-[360px] w-[75%] rotate-12 rounded-[100%] border-t-2 border-cyan-300/40 bg-cyan-400/5 blur-[2px] shadow-[0_-20px_90px_rgba(34,211,238,0.25)]" />
+
+          <div className="absolute left-[8%] top-[18%] h-72 w-72 rounded-full bg-purple-600/20 blur-[110px]" />
+          <div className="absolute right-[5%] top-[28%] h-80 w-80 rounded-full bg-cyan-500/15 blur-[120px]" />
+          <div className="absolute left-[42%] top-[8%] h-64 w-64 rounded-full bg-fuchsia-500/15 blur-[120px]" />
+
+          <div className="absolute left-[-10%] top-[48%] h-px w-[120%] rotate-[-8deg] bg-gradient-to-r from-transparent via-fuchsia-400/50 to-transparent shadow-[0_0_30px_rgba(217,70,239,0.55)]" />
+          <div className="absolute left-[-10%] top-[54%] h-px w-[120%] rotate-[7deg] bg-gradient-to-r from-transparent via-purple-400/45 to-transparent shadow-[0_0_35px_rgba(168,85,247,0.5)]" />
+          <div className="absolute left-[-10%] top-[61%] h-px w-[120%] rotate-[-5deg] bg-gradient-to-r from-transparent via-cyan-300/50 to-transparent shadow-[0_0_35px_rgba(34,211,238,0.55)]" />
+
+          <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-[#050511] to-transparent" />
+        </div>
         <div className="absolute left-[-10rem] top-24 h-96 w-96 rounded-full bg-purple-700/30 blur-[120px]" />
         <div className="absolute right-[-8rem] top-52 h-96 w-96 rounded-full bg-cyan-500/20 blur-[120px]" />
 
@@ -125,12 +147,24 @@ export default function Home() {
             </div>
 
             <h1 className="max-w-4xl text-5xl font-black leading-[0.98] tracking-tight sm:text-6xl lg:text-7xl">
-              YOUR BUSINESS
+              <span className="bg-gradient-to-r from-cyan-200 via-purple-300 to-fuchsia-300 bg-clip-text text-transparent drop-shadow-[0_0_18px_rgba(168,85,247,0.22)]">
+                YOUR
+              </span>
               <br />
-              DESERVES TO
+              <span className="bg-gradient-to-r from-purple-300 via-fuchsia-300 to-cyan-300 bg-clip-text text-transparent">
+                BUSINESS
+              </span>
               <br />
-              <span className="bg-gradient-to-r from-purple-400 via-fuchsia-400 to-cyan-300 bg-clip-text text-transparent">
-                LOOK THIS GOOD.
+              <span className="bg-gradient-to-r from-purple-300 via-fuchsia-300 to-cyan-300 bg-clip-text text-transparent">
+                DESERVES TO
+              </span>
+              <br />
+              <span className="bg-gradient-to-r from-fuchsia-400 via-purple-300 to-cyan-300 bg-clip-text text-transparent drop-shadow-[0_0_22px_rgba(217,70,239,0.25)]">
+                LOOK THIS
+              </span>
+              <br />
+              <span className="bg-gradient-to-r from-purple-300 via-fuchsia-300 to-cyan-300 bg-clip-text text-transparent">
+                GOOD.
               </span>
             </h1>
 
@@ -164,9 +198,13 @@ export default function Home() {
 
           {/* Hero visual */}
           <div className="relative">
-            <div className="absolute inset-0 rounded-[3rem] bg-gradient-to-br from-purple-600/30 to-cyan-400/20 blur-3xl" />
+            {/* Approved neon laptop aura */}
+            <div className="absolute -inset-16 rounded-[4rem] bg-gradient-to-r from-fuchsia-600/35 via-blue-600/30 to-cyan-400/35 blur-[70px]" />
+            <div className="absolute -left-8 -top-8 h-[70%] w-[70%] rounded-[3rem] bg-fuchsia-500/25 blur-[55px]" />
+            <div className="absolute -bottom-8 -right-8 h-[70%] w-[70%] rounded-[3rem] bg-cyan-400/25 blur-[55px]" />
+            <div className="absolute -inset-[2px] rounded-[2rem] bg-gradient-to-br from-fuchsia-400 via-purple-500 to-cyan-300 opacity-90 blur-[2px]" />
 
-            <div className="relative rounded-[2rem] border border-white/10 bg-white/[0.06] p-5 shadow-2xl backdrop-blur-xl">
+            <div className="relative rounded-[2rem] border border-cyan-300/40 bg-[#080817]/90 p-5 shadow-[0_0_55px_rgba(34,211,238,0.22),0_0_70px_rgba(217,70,239,0.18)] backdrop-blur-xl">
               <div className="mb-4 flex items-center gap-2">
                 <span className="h-3 w-3 rounded-full bg-rose-400" />
                 <span className="h-3 w-3 rounded-full bg-amber-300" />
@@ -179,7 +217,9 @@ export default function Home() {
                     <div className="text-xs uppercase tracking-[0.25em] text-cyan-300">
                       Your Brand
                     </div>
-                    <div className="mt-1 text-2xl font-black">YOUR BUSINESS</div>
+                    <div className="mt-1 bg-gradient-to-r from-fuchsia-300 via-purple-200 to-cyan-300 bg-clip-text text-2xl font-black text-transparent">
+                      YOUR BUSINESS
+                    </div>
                   </div>
                   <div className="rounded-full bg-purple-500/15 px-3 py-1 text-xs text-purple-300">
                     LIVE
@@ -191,8 +231,14 @@ export default function Home() {
                     <div className="text-sm font-bold text-cyan-300">
                       PROFESSIONAL. MODERN. YOURS.
                     </div>
-                    <div className="mt-3 text-4xl font-black">
-                      Turn your idea into a digital experience.
+                    <div className="mt-3 text-4xl font-black leading-tight">
+                      <span className="bg-gradient-to-r from-fuchsia-300 via-purple-200 to-cyan-300 bg-clip-text text-transparent drop-shadow-[0_0_18px_rgba(217,70,239,0.2)]">
+                        Turn your idea into a
+                      </span>
+                      <br />
+                      <span className="bg-gradient-to-r from-purple-200 via-fuchsia-300 to-cyan-300 bg-clip-text text-transparent drop-shadow-[0_0_18px_rgba(34,211,238,0.2)]">
+                        digital experience.
+                      </span>
                     </div>
                     <div className="mt-5 h-2 w-32 rounded-full bg-gradient-to-r from-purple-500 to-cyan-400" />
                   </div>
@@ -215,13 +261,20 @@ export default function Home() {
       </section>
 
       {/* Services */}
-      <section id="services" className="border-y border-white/10 bg-white/[0.025] py-24">
+      <section id="services" className="relative overflow-hidden border-y border-purple-400/20 bg-gradient-to-b from-[#050511] via-[#08051a] to-[#050511] py-24">
+        {/* KBETZ neon atmosphere */}
+        <div className="pointer-events-none absolute inset-0 overflow-hidden">
+          <div className="absolute -left-32 top-10 h-80 w-80 rounded-full bg-fuchsia-600/20 blur-[110px]" />
+          <div className="absolute -right-32 bottom-0 h-96 w-96 rounded-full bg-cyan-500/20 blur-[120px]" />
+          <div className="absolute -left-[15%] top-[35%] h-[260px] w-[75%] -rotate-12 rounded-[100%] border-t-2 border-fuchsia-400/45 shadow-[0_-18px_70px_rgba(217,70,239,0.35)]" />
+          <div className="absolute -right-[15%] top-[45%] h-[280px] w-[75%] rotate-12 rounded-[100%] border-t-2 border-cyan-300/45 shadow-[0_-18px_80px_rgba(34,211,238,0.35)]" />
+        </div>
         <div className="mx-auto max-w-7xl px-6">
           <div className="max-w-3xl">
             <div className="text-sm font-bold uppercase tracking-[0.25em] text-cyan-300">
               What We Do
             </div>
-            <h2 className="mt-3 text-4xl font-black sm:text-5xl">
+            <h2 className="bg-gradient-to-r from-fuchsia-300 via-purple-300 to-cyan-300 bg-clip-text text-transparent mt-3 text-4xl font-black sm:text-5xl">
               More than just a pretty website.
             </h2>
             <p className="mt-5 text-lg leading-8 text-zinc-400">
@@ -239,10 +292,10 @@ export default function Home() {
             ].map(([icon, title, text]) => (
               <div
                 key={title}
-                className="rounded-2xl border border-white/10 bg-white/[0.04] p-7 transition hover:-translate-y-1 hover:border-cyan-400/30"
+                className="rounded-2xl border border-purple-400/20 bg-gradient-to-br from-purple-950/25 via-black/70 to-cyan-950/20 p-7 shadow-lg shadow-purple-950/20 transition hover:-translate-y-1 hover:border-cyan-300/50 hover:shadow-purple-500/20"
               >
                 <div className="text-3xl">{icon}</div>
-                <h3 className="mt-5 text-xl font-bold">{title}</h3>
+                <h3 className="mt-5 bg-gradient-to-r from-fuchsia-300 via-purple-300 to-cyan-300 bg-clip-text text-xl font-black text-transparent">{title}</h3>
                 <p className="mt-3 leading-7 text-zinc-400">{text}</p>
               </div>
             ))}
@@ -251,7 +304,22 @@ export default function Home() {
       </section>
 
       {/* Concept portfolio */}
-      <section id="work" className="relative overflow-hidden py-24">
+      <section id="work" className="relative overflow-hidden bg-gradient-to-b from-[#050511] via-[#08051d] to-[#050511] py-24">
+        {/* Sweeping Luxevra / KBETZ light waves */}
+        <div className="pointer-events-none absolute inset-0 overflow-hidden">
+          <div className="absolute -left-40 top-[5%] h-[520px] w-[75%] -rotate-12 rounded-[100%] border-t-[3px] border-fuchsia-400/55 shadow-[0_-25px_100px_rgba(217,70,239,0.45)]" />
+          <div className="absolute -right-40 top-[18%] h-[500px] w-[75%] rotate-12 rounded-[100%] border-t-[3px] border-cyan-300/55 shadow-[0_-25px_110px_rgba(34,211,238,0.45)]" />
+
+          <div className="absolute -left-52 bottom-[5%] h-[420px] w-[80%] rotate-12 rounded-[100%] border-t-2 border-purple-400/55 shadow-[0_-20px_90px_rgba(168,85,247,0.45)]" />
+          <div className="absolute -right-52 bottom-[8%] h-[430px] w-[80%] -rotate-12 rounded-[100%] border-t-2 border-fuchsia-400/50 shadow-[0_-20px_90px_rgba(217,70,239,0.4)]" />
+
+          <div className="absolute left-[-10%] top-[30%] h-96 w-96 rounded-full bg-purple-600/20 blur-[130px]" />
+          <div className="absolute right-[-10%] top-[45%] h-[430px] w-[430px] rounded-full bg-cyan-500/20 blur-[140px]" />
+          <div className="absolute bottom-[5%] left-[30%] h-96 w-96 rounded-full bg-fuchsia-600/15 blur-[140px]" />
+
+          <div className="absolute left-[-10%] top-[58%] h-px w-[120%] -rotate-6 bg-gradient-to-r from-transparent via-fuchsia-400/60 to-transparent shadow-[0_0_35px_rgba(217,70,239,0.65)]" />
+          <div className="absolute left-[-10%] top-[63%] h-px w-[120%] rotate-6 bg-gradient-to-r from-transparent via-cyan-300/60 to-transparent shadow-[0_0_35px_rgba(34,211,238,0.65)]" />
+        </div>
         <div className="pointer-events-none absolute left-[-10%] top-[12%] h-72 w-72 rounded-full bg-fuchsia-600/10 blur-[120px]" />
         <div className="pointer-events-none absolute right-[-8%] top-[45%] h-72 w-72 rounded-full bg-cyan-500/10 blur-[120px]" />
         <div className="mx-auto max-w-7xl px-6">
@@ -259,7 +327,7 @@ export default function Home() {
             <div className="text-sm font-bold uppercase tracking-[0.25em] text-purple-300">
               Imagine Your Business Online
             </div>
-            <h2 className="mt-3 text-4xl font-black sm:text-5xl">
+            <h2 className="bg-gradient-to-r from-fuchsia-300 via-purple-300 to-cyan-300 bg-clip-text text-transparent mt-3 text-4xl font-black sm:text-5xl">
               One vision. Endless possibilities.
             </h2>
             <p className="mx-auto mt-5 max-w-2xl text-lg leading-8 text-zinc-400">
@@ -272,7 +340,7 @@ export default function Home() {
             {concepts.map((concept) => (
               <article
                 key={concept.type}
-                className="group overflow-hidden rounded-3xl border border-white/10 bg-[#0a0a19] transition duration-300 hover:-translate-y-2 hover:border-white/20"
+                className="group overflow-hidden rounded-3xl border border-purple-400/35 bg-gradient-to-br from-[#100820]/95 via-[#070716]/95 to-[#06131b]/95 shadow-[0_0_24px_rgba(168,85,247,0.12),0_0_18px_rgba(34,211,238,0.08)] backdrop-blur-xl transition duration-300 hover:-translate-y-2 hover:border-cyan-300/60 hover:shadow-[0_0_35px_rgba(217,70,239,0.22),0_0_35px_rgba(34,211,238,0.18)]"
               >
                 <div className={`h-2 bg-gradient-to-r ${concept.accent}`} />
 
@@ -286,7 +354,7 @@ export default function Home() {
                   <div className="mt-8 text-xs font-bold uppercase tracking-[0.2em] text-cyan-300">
                     {concept.type}
                   </div>
-                  <h3 className="mt-2 text-2xl font-black">{concept.name}</h3>
+                  <h3 className="mt-2 text-2xl font-black bg-gradient-to-r from-fuchsia-300 via-purple-300 to-cyan-300 bg-clip-text text-transparent">{concept.name}</h3>
                   <p className="mt-3 min-h-20 leading-7 text-zinc-400">
                     {concept.description}
                   </p>
@@ -345,9 +413,9 @@ export default function Home() {
 
                             <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/25 via-transparent to-white/5" />
 
-                            <div className="pointer-events-none absolute inset-x-0 bottom-0 flex items-end justify-between bg-gradient-to-t from-black/75 to-transparent px-4 pb-3 pt-10 text-white opacity-0 transition duration-500 group-hover/preview:opacity-100">
+                            <div className="pointer-events-none absolute inset-x-0 bottom-0 flex items-end justify-between bg-gradient-to-t from-black/75 to-transparent px-4 pb-3 pt-10 bg-gradient-to-r from-fuchsia-300 via-purple-300 to-cyan-300 bg-clip-text text-transparent opacity-0 transition duration-500 group-hover/preview:opacity-100">
                               <div>
-                                <div className="text-[7px] font-bold uppercase tracking-[0.22em] text-white/65">
+                                <div className="text-[7px] font-bold uppercase tracking-[0.22em] bg-gradient-to-r from-fuchsia-300 via-purple-300 to-cyan-300 bg-clip-text text-transparent/65">
                                   Premium Concept
                                 </div>
                                 <div className="mt-0.5 text-xs font-black">
@@ -376,15 +444,140 @@ export default function Home() {
         </div>
       </section>
 
+
+      {/* Featured Real Project */}
+      <section
+        id="featured-project"
+        className="relative overflow-hidden border-y border-purple-400/25 bg-gradient-to-b from-[#050511] via-[#0b0620] to-[#050511] py-24"
+      >
+        {/* Featured project neon atmosphere */}
+        <div className="pointer-events-none absolute inset-0 overflow-hidden">
+          <div className="absolute left-1/2 top-1/2 h-[520px] w-[85%] -translate-x-1/2 -translate-y-1/2 rounded-full bg-gradient-to-r from-purple-600/25 via-fuchsia-500/20 to-cyan-400/25 blur-[120px]" />
+          <div className="absolute -left-[20%] top-[18%] h-[360px] w-[75%] -rotate-12 rounded-[100%] border-t-[3px] border-fuchsia-400/55 shadow-[0_-24px_100px_rgba(217,70,239,0.5)]" />
+          <div className="absolute -right-[20%] top-[30%] h-[360px] w-[75%] rotate-12 rounded-[100%] border-t-[3px] border-cyan-300/55 shadow-[0_-24px_100px_rgba(34,211,238,0.5)]" />
+          <div className="absolute bottom-[5%] left-[15%] h-80 w-80 rounded-full bg-purple-600/25 blur-[120px]" />
+          <div className="absolute right-[8%] top-[12%] h-80 w-80 rounded-full bg-cyan-500/20 blur-[130px]" />
+        </div>
+
+        <div className="relative mx-auto max-w-7xl px-6">
+          <div className="mx-auto max-w-3xl text-center">
+            <div className="inline-flex rounded-full border border-cyan-300/40 bg-gradient-to-r from-purple-500/15 via-fuchsia-500/15 to-cyan-400/15 px-4 py-2 text-xs font-black uppercase tracking-[0.25em] text-cyan-300">
+              Featured Real Project
+            </div>
+
+            <h2 className="mt-6 bg-gradient-to-r from-fuchsia-300 via-purple-300 to-cyan-300 bg-clip-text text-4xl font-black text-transparent sm:text-6xl">
+              KBETZ SPORTS
+            </h2>
+
+            <p className="mt-3 bg-gradient-to-r from-purple-300 via-fuchsia-300 to-cyan-300 bg-clip-text text-lg font-bold text-transparent">
+              Sports Technology Platform
+            </p>
+
+            <p className="mx-auto mt-6 max-w-2xl text-base font-medium leading-8 text-purple-100/80">
+              What started as a website idea evolved into a custom production
+              platform with AI-powered picks, live sports data, user accounts,
+              subscription functionality, parlay tools, results tracking, APIs,
+              and production deployment.
+            </p>
+          </div>
+
+          <div className="mx-auto mt-12 max-w-5xl overflow-hidden rounded-[2rem] border border-cyan-300/45 bg-gradient-to-br from-purple-950/50 via-[#050510]/95 to-cyan-950/40 p-6 shadow-[0_0_45px_rgba(217,70,239,0.22),0_0_55px_rgba(34,211,238,0.18)] backdrop-blur-xl sm:p-10">
+            <div className="grid gap-8 lg:grid-cols-[1.3fr_.7fr] lg:items-center">
+              <div>
+                <div className="text-xs font-bold uppercase tracking-[0.22em] text-fuchsia-300">
+                  From Website Idea to Full Platform
+                </div>
+
+                <h3 className="mt-4 bg-gradient-to-r from-white via-fuchsia-200 to-cyan-200 bg-clip-text text-2xl font-black text-transparent sm:text-3xl">
+                  Built far beyond a standard website.
+                </h3>
+
+                <div className="mt-6 flex flex-wrap gap-2">
+                  {[
+                    "AI-Powered Picks",
+                    "Live Sports Data",
+                    "User Accounts",
+                    "Subscriptions",
+                    "Payment Processing",
+                    "Parlay Tools",
+                    "Results Tracking",
+                    "Custom APIs",
+                    "Production Deployment",
+                  ].map((feature) => (
+                    <span
+                      key={feature}
+                      className="rounded-full border border-purple-400/30 bg-gradient-to-r from-purple-500/20 via-fuchsia-500/15 to-cyan-400/20 px-3 py-2 text-xs font-bold text-cyan-100 shadow-sm shadow-purple-500/10"
+                    >
+                      {feature}
+                    </span>
+                  ))}
+                </div>
+              </div>
+
+              <div className="rounded-3xl border border-fuchsia-400/30 bg-gradient-to-br from-purple-600/15 via-fuchsia-500/10 to-cyan-400/15 p-7 text-center shadow-xl shadow-purple-500/10">
+                <div className="text-xs font-black uppercase tracking-[0.2em] text-fuchsia-200">
+                  Estimated Replacement Build Value
+                </div>
+
+                <div className="mt-3 bg-gradient-to-r from-fuchsia-300 via-purple-300 to-cyan-300 bg-clip-text text-5xl font-black text-transparent">
+                  $15,000+
+                </div>
+
+                <p className="mt-4 text-sm font-medium leading-6 text-purple-100/70">
+                  Reflecting the expanded custom functionality and production
+                  platform scope.
+                </p>
+              </div>
+            </div>
+
+            <div className="mt-10 flex flex-col gap-3 border-t border-gradient-to-r border-purple-400/30 pt-8 sm:flex-row sm:items-center sm:justify-between">
+              <div>
+                <div className="bg-gradient-to-r from-fuchsia-300 via-purple-300 to-cyan-300 bg-clip-text text-xs font-black uppercase tracking-[0.2em] text-transparent">
+                  Real Project • Live in Production
+                </div>
+                <div className="mt-2 text-sm font-bold text-cyan-300">
+                  KBETZSports.com
+                </div>
+              </div>
+
+              <div className="flex flex-col gap-3 sm:flex-row">
+                <a
+                  href="https://kbetzsports.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="rounded-xl border border-cyan-300/40 bg-cyan-400/10 px-5 py-3 text-center text-sm font-bold text-cyan-100 transition hover:bg-cyan-400/20"
+                >
+                  View Live Project →
+                </a>
+
+                <a
+                  href="#contact"
+                  className="rounded-xl bg-gradient-to-r from-fuchsia-500 via-purple-500 to-cyan-400 px-5 py-3 text-center text-sm font-black text-white shadow-lg shadow-purple-500/20 transition hover:scale-[1.02]"
+                >
+                  Start Your Project →
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Pricing */}
-      <section id="pricing" className="relative overflow-hidden border-y border-white/10 bg-white/[0.025] py-24">
-        <div className="pointer-events-none absolute left-1/2 top-0 h-64 w-[70%] -translate-x-1/2 rounded-full bg-gradient-to-r from-fuchsia-600/10 via-purple-600/10 to-cyan-500/10 blur-[110px]" />
+      <section id="pricing" className="relative overflow-hidden border-y border-purple-400/20 bg-gradient-to-b from-[#050511] via-[#09051c] to-[#050511] py-24">
+        {/* Pricing neon atmosphere */}
+        <div className="pointer-events-none absolute inset-0 overflow-hidden">
+          <div className="absolute left-1/2 top-0 h-80 w-[75%] -translate-x-1/2 rounded-full bg-gradient-to-r from-fuchsia-600/20 via-purple-600/20 to-cyan-500/20 blur-[110px]" />
+          <div className="absolute -left-[18%] top-[28%] h-[320px] w-[70%] -rotate-12 rounded-[100%] border-t-2 border-fuchsia-400/50 shadow-[0_-20px_90px_rgba(217,70,239,0.4)]" />
+          <div className="absolute -right-[18%] top-[42%] h-[320px] w-[70%] rotate-12 rounded-[100%] border-t-2 border-cyan-300/50 shadow-[0_-20px_90px_rgba(34,211,238,0.4)]" />
+          <div className="absolute bottom-[-10%] left-[25%] h-96 w-96 rounded-full bg-purple-600/20 blur-[130px]" />
+          <div className="absolute right-[-5%] top-[15%] h-80 w-80 rounded-full bg-cyan-500/15 blur-[120px]" />
+        </div>
         <div className="mx-auto max-w-7xl px-6">
           <div className="text-center">
             <div className="text-sm font-bold uppercase tracking-[0.25em] text-cyan-300">
               Website Packages
             </div>
-            <h2 className="mt-3 text-4xl font-black sm:text-5xl">
+            <h2 className="bg-gradient-to-r from-fuchsia-300 via-purple-300 to-cyan-300 bg-clip-text text-transparent mt-3 text-4xl font-black sm:text-5xl">
               Start where your business is.
             </h2>
             <p className="mx-auto mt-5 max-w-2xl text-zinc-400">
@@ -399,8 +592,8 @@ export default function Home() {
                 key={plan.name}
                 className={`relative rounded-3xl border p-7 ${
                   plan.popular
-                    ? "border-cyan-400/50 bg-gradient-to-b from-cyan-400/10 to-purple-600/10"
-                    : "border-white/10 bg-[#090918]"
+                    ? "border-cyan-300/70 bg-gradient-to-b from-cyan-400/20 via-purple-600/20 to-[#090918] shadow-[0_0_35px_rgba(34,211,238,0.28),0_0_30px_rgba(217,70,239,0.18)]"
+                    : "border-purple-400/40 bg-gradient-to-b from-purple-950/40 via-[#090918]/95 to-cyan-950/25 shadow-[0_0_25px_rgba(168,85,247,0.16),0_0_18px_rgba(34,211,238,0.08)]"
                 }`}
               >
                 {plan.popular && (
@@ -409,21 +602,21 @@ export default function Home() {
                   </div>
                 )}
 
-                <div className="text-sm font-black tracking-[0.2em] text-zinc-300">
+                <div className="bg-gradient-to-r from-fuchsia-300 via-purple-300 to-cyan-300 bg-clip-text text-sm font-black tracking-[0.2em] text-transparent">
                   {plan.name}
                 </div>
-                <div className="mt-4 text-5xl font-black">{plan.price}</div>
-                <div className="mt-1 text-xs uppercase tracking-widest text-zinc-500">
+                <div className="mt-4 bg-gradient-to-r from-fuchsia-300 via-purple-300 to-cyan-300 bg-clip-text text-5xl font-black text-transparent">{plan.price}</div>
+                <div className="mt-1 text-xs font-bold uppercase tracking-widest text-fuchsia-300/80">
                   Starting at
                 </div>
-                <p className="mt-5 min-h-14 text-sm leading-6 text-zinc-400">
+                <p className="mt-5 min-h-14 text-sm leading-6 text-purple-100/70">
                   {plan.description}
                 </p>
 
                 <div className="mt-6 space-y-3">
                   {plan.items.map((item) => (
-                    <div key={item} className="text-sm text-zinc-300">
-                      <span className="mr-2 text-cyan-300">✓</span>
+                    <div key={item} className="text-sm text-purple-100/80">
+                      <span className="mr-2 font-black text-cyan-300">✓</span>
                       {item}
                     </div>
                   ))}
@@ -431,7 +624,7 @@ export default function Home() {
 
                 <a
                   href="#contact"
-                  className="mt-8 block rounded-full border border-white/15 bg-white/[0.05] px-5 py-3 text-center text-sm font-bold transition hover:bg-white/10"
+                  className="mt-8 block rounded-full border border-cyan-300/30 bg-gradient-to-r from-purple-500/15 via-fuchsia-500/15 to-cyan-400/15 px-5 py-3 text-center text-sm font-bold text-cyan-100 transition hover:border-fuchsia-300/50 hover:from-purple-500/25 hover:via-fuchsia-500/25 hover:to-cyan-400/25"
                 >
                   Request This Package
                 </a>
@@ -442,15 +635,23 @@ export default function Home() {
       </section>
 
       {/* Contact */}
-      <section id="contact" className="relative overflow-hidden py-28">
-        <div className="pointer-events-none absolute bottom-[-30%] left-1/2 h-80 w-[65%] -translate-x-1/2 rounded-full bg-gradient-to-r from-purple-600/15 via-fuchsia-500/10 to-cyan-500/15 blur-[120px]" />
-        <div className="absolute left-1/2 top-1/2 h-72 w-72 -translate-x-1/2 -translate-y-1/2 rounded-full bg-purple-600/20 blur-[120px]" />
+      <section id="contact" className="relative overflow-hidden bg-gradient-to-b from-[#050511] via-[#08051b] to-[#03030b] py-28">
+        {/* Contact neon atmosphere */}
+        <div className="pointer-events-none absolute inset-0 overflow-hidden">
+          <div className="absolute bottom-[-20%] left-1/2 h-[500px] w-[80%] -translate-x-1/2 rounded-full bg-gradient-to-r from-purple-600/25 via-fuchsia-500/20 to-cyan-500/25 blur-[120px]" />
+          <div className="absolute -left-[20%] top-[20%] h-[360px] w-[75%] -rotate-12 rounded-[100%] border-t-[3px] border-fuchsia-400/55 shadow-[0_-22px_100px_rgba(217,70,239,0.5)]" />
+          <div className="absolute -right-[20%] top-[32%] h-[360px] w-[75%] rotate-12 rounded-[100%] border-t-[3px] border-cyan-300/55 shadow-[0_-22px_100px_rgba(34,211,238,0.5)]" />
+          <div className="absolute left-[-10%] top-[65%] h-px w-[120%] -rotate-6 bg-gradient-to-r from-transparent via-purple-400/60 to-transparent shadow-[0_0_40px_rgba(168,85,247,0.7)]" />
+          <div className="absolute left-[10%] top-[15%] h-80 w-80 rounded-full bg-purple-600/20 blur-[120px]" />
+          <div className="absolute right-[5%] bottom-[5%] h-80 w-80 rounded-full bg-cyan-500/20 blur-[130px]" />
+        </div>
 
         <div className="relative mx-auto max-w-4xl px-6 text-center">
+          <div className="pointer-events-none absolute -inset-x-12 top-24 bottom-8 -z-10 rounded-[3rem] bg-gradient-to-r from-fuchsia-600/20 via-purple-600/15 to-cyan-500/20 blur-[55px]" />
           <div className="text-sm font-bold uppercase tracking-[0.25em] text-purple-300">
             Let's Build Something
           </div>
-          <h2 className="mt-4 text-4xl font-black sm:text-6xl">
+          <h2 className="bg-gradient-to-r from-fuchsia-300 via-purple-300 to-cyan-300 bg-clip-text text-transparent mt-4 text-4xl font-black sm:text-6xl">
             Ready to give your business a digital home?
           </h2>
           <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-zinc-400">
@@ -458,14 +659,11 @@ export default function Home() {
             We'll help you choose the right starting point.
           </p>
 
-          <a
-            href="mailto:aynekbetz@gmail.com?subject=Website%20Design%20Inquiry"
-            className="mt-9 inline-block rounded-full bg-gradient-to-r from-purple-600 via-fuchsia-500 to-cyan-500 px-9 py-4 text-lg font-black shadow-2xl shadow-purple-700/30 transition hover:scale-105"
-          >
-            Start Your Website →
-          </a>
+          <InquiryForm />
 
-          <p className="mt-5 text-sm text-zinc-500">aynekbetz@gmail.com</p>
+          <p className="mt-5 text-sm text-zinc-500">
+            Questions? aynekbetz@gmail.com
+          </p>
         </div>
       </section>
 

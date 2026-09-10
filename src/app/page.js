@@ -110,6 +110,12 @@ export default function Home() {
             <a href="#pricing" className="transition hover:text-cyan-300">
               Pricing
             </a>
+            <a
+              href="/shop"
+              className="bg-gradient-to-r from-fuchsia-300 via-purple-300 to-cyan-300 bg-clip-text font-bold text-transparent transition hover:opacity-80"
+            >
+              Brand Shop
+            </a>
           </div>
 
           <a
